@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Request Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">DRIVER SIMULATOR</p>
+                <h1>Ride Requests</h1>
+            </div>
+            <div class="online-status">
+                <span id="status-indicator"></span>
+                <span id="status-text">Online</span>
+                <button id="toggle-online" class="status-toggle">Go Offline</button>
+            </div>
+        </header>
+
+        <section class="map-section">
+            <div class="map-placeholder">
+                <div class="map-road road-one"></div>
+                <div class="map-road road-two"></div>
+                <div class="map-road road-three"></div>
+                <div class="map-road road-four"></div>
+                <div class="map-label">HYDERABAD</div>
+                <div class="map-location">📍 Your current location</div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Requests</span>
+                <strong id="total-requests">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Accepted</span>
+                <strong id="accepted-requests">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Declined</span>
+                <strong id="declined-requests">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Missed</span>
+                <strong id="missed-requests">0</strong>
+            </div>
+        </section>
+
+        <section class="controls">
+            <h2>Generate Ride Request</h2>
+            <p>Choose which driver app receives a request.</p>
+
+            <div class="button-group">
+                <button id="uber-button" class="generate-button uber-button">
+                    Uber Ride
+                </button>
+
+                <button id="rapido-button" class="generate-button rapido-button">
+                    Rapido Ride
+                </button>
+
+                <button id="both-button" class="generate-button both-button">
+                    Both
+                </button>
+            </div>
+        </section>
+
+        <section class="requests-section">
+            <div class="requests-heading">
+                <div>
+                    <h2>Incoming Requests</h2>
+                    <p>Respond before the 15-second timer expires.</p>
+                </div>
+                <button id="clear-button" class="clear-button">
+                    Clear All
+                </button>
+            </div>
+
+            <div id="request-container" class="request-container">
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">🚕</div>
+                    <h3>No incoming requests</h3>
+                    <p>Tap Uber Ride, Rapido Ride, or Both to generate a request.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Standalone Ride Request Simulator</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
